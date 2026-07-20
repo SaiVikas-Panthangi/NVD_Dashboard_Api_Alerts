@@ -18,13 +18,35 @@ pipeline {
       }
     }
 
+    stage('Verify Node Tooling') {
+      steps {
+        script {
+          if (isUnix()) {
+            sh '''
+              command -v node >/dev/null 2>&1 || { echo "Node.js is not installed on this Jenkins agent."; exit 1; }
+              command -v npm >/dev/null 2>&1 || { echo "npm is not installed on this Jenkins agent."; exit 1; }
+              node --version
+              npm --version
+            '''
+          } else {
+            bat '''
+              where node || (echo Node.js is not installed on this Jenkins agent. & exit /b 1)
+              where npm || (echo npm is not installed on this Jenkins agent. & exit /b 1)
+              node --version
+              npm --version
+            '''
+          }
+        }
+      }
+    }
+
     stage('Install Dependencies') {
       steps {
         script {
           if (isUnix()) {
-            sh 'npm install'
+            sh 'npm ci'
           } else {
-            bat 'npm install'
+            bat 'npm ci'
           }
         }
       }
