@@ -3,6 +3,7 @@ logs/*
 !logs/.gitkeep
 reports/*
 !reports/.gitkeep
+data/state.json
 *.log
 npm-debug.log*
 .DS_Store

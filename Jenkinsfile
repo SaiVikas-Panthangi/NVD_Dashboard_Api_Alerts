@@ -11,10 +11,6 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '20'))
   }
 
-  environment {
-    TEAMS_WEBHOOK_URL = credentials('inventory-endpoint-monitor-teams-webhook')
-  }
-
   stages {
     stage('Checkout') {
       steps {

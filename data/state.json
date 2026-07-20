@@ -1,12 +1,12 @@
 {
-  "currentStatus": "UP",
-  "lastCheckTime": "2026-07-20T04:17:02.412Z",
-  "lastSuccessfulCheckTime": "2026-07-20T04:17:02.412Z",
+  "currentStatus": "UNKNOWN",
+  "lastCheckTime": null,
+  "lastSuccessfulCheckTime": null,
   "failureStartTime": null,
   "lastDailyHealthNotificationDate": null,
-  "lastNotificationType": "RECOVERY",
-  "lastNotificationTime": "2026-07-20T04:17:02.412Z",
-  "lastStatusCode": 200,
-  "lastResponseTimeMs": 8710,
+  "lastNotificationType": null,
+  "lastNotificationTime": null,
+  "lastStatusCode": null,
+  "lastResponseTimeMs": null,
   "lastError": null
 }
