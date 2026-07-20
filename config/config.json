@@ -1,0 +1,7 @@
+{
+  "inventoryUrl": "https://inutilidcplp322.idc1.level3.com:8483/hapi/inventory?all",
+  "timeout": 15000,
+  "teamsWebhookUrl": "https://default72b17115991542c09f1b4f98e5a4bc.d2.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/8a12089e804a47718d10b237f71b4654/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=B9S-AFAaY8fXzZoqSalc4H9OO5p9l8piBdIH6y8KEl0",
+  "schedulerFrequency": "hourly",
+  "enableDailyHealthNotification": true
+}

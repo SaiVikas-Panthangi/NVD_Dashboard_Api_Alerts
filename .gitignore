@@ -1,0 +1,8 @@
+node_modules/
+logs/*
+!logs/.gitkeep
+reports/*
+!reports/.gitkeep
+*.log
+npm-debug.log*
+.DS_Store

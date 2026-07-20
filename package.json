@@ -1,0 +1,19 @@
+{
+  "name": "inventory-endpoint-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js monitor for a single inventory endpoint with Teams alerts and run history",
+  "main": "src/monitor.js",
+  "type": "commonjs",
+  "scripts": {
+    "monitor": "node src/monitor.js",
+    "start": "npm run monitor"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "ISC"
+}
