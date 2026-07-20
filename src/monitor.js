@@ -40,7 +40,7 @@ function loadConfig() {
   return {
     inventoryUrl: config.inventoryUrl,
     timeout: Number(config.timeout || 15000),
-    teamsWebhookUrl: config.teamsWebhookUrl || '',
+    teamsWebhookUrl: process.env.TEAMS_WEBHOOK_URL || config.teamsWebhookUrl || '',
     schedulerFrequency: config.schedulerFrequency || 'hourly',
     enableDailyHealthNotification: Boolean(config.enableDailyHealthNotification)
   };

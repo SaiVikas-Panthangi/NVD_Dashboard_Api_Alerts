@@ -32,11 +32,13 @@ pipeline {
 
     stage('Run Monitor') {
       steps {
-        script {
-          if (isUnix()) {
-            sh 'npm run monitor'
-          } else {
-            bat 'npm run monitor'
+        withCredentials([string(credentialsId: 'teams-webhook-url', variable: 'TEAMS_WEBHOOK_URL')]) {
+          script {
+            if (isUnix()) {
+              sh 'npm run monitor'
+            } else {
+              bat 'npm run monitor'
+            }
           }
         }
       }
